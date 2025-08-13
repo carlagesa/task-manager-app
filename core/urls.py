@@ -19,4 +19,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Route all requests starting with 'api/tasks/' to our tasks app
+    path('api/tasks/', include('tasks.urls')),
 ]
