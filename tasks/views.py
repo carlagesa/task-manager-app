@@ -1,14 +1,15 @@
 # tasks/views.py
 from rest_framework import generics
+from django_filters.rest_framework import DjangoFilterBackend # Imports the filter backend
 from .models import Task
 from .serializers import TaskSerializer
 
-# This view handles listing all tasks and creating a new task
 class TaskListCreateAPIView(generics.ListCreateAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['is_completed'] # Specifies which fields can be filtered
 
-# This view handles retrieving, updating, and deleting a single task by its ID
 class TaskRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
