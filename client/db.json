@@ -1,0 +1,18 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Learn React",
+      "description": "Build a task management app with components",
+      "is_completed": false,
+      "created_at": "2025-01-15T10:30:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Setup JSON Server",
+      "description": "Create a temporary backend for development",
+      "is_completed": true,
+      "created_at": "2025-01-14T14:20:00.000Z"
+    }
+  ]
+}
